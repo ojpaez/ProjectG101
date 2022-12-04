@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Proyecto_g101</string>
+
+    //Stings main activity
+    <string name="text_name">Nombre</string>
+    <string name="text_last_name">Apellido</string>
+    <string name="text_age">Edad</string>
+    <string name="text_btn_ok">OK</string>
+    <string name="text_btn_cambiar">CAMBIAR PÄG</string>
+    <string name="text_title_main_activity">Bienvenido</string>
+
+    //Stings main activity
+    <string name="text_btn_volver">VOLVER</string>
+    <string name="text_title_main_activity2">Página 2</string>
+
+</resources>
