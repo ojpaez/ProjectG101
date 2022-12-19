@@ -49,7 +49,7 @@ public class BranchAdapter extends BaseAdapter {
         TextView tvNameBranch = (TextView) convertView.findViewById(R.id.tvNameBranch);
         TextView tvDescriptionBranch = (TextView) convertView.findViewById(R.id.tvDescriptionBranch);
 
-        imgBranch.setImageResource(branch.getImage());
+        imgBranch.setImageResource(R.drawable.splash_sucursales);
         tvNameBranch.setText(branch.getName());
         tvDescriptionBranch.setText(branch.getDescription());
 

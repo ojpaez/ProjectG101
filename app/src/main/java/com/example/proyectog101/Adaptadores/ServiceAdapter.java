@@ -52,17 +52,18 @@ public class ServiceAdapter extends BaseAdapter {
         TextView tvPriceService = (TextView) convertView.findViewById(R.id.tvPriceService);
         //Button btnService = (Button) convertView.findViewById(R.id.btnService);
 
-        imgService.setImageResource(service.getImage());
+        imgService.setImageResource(R.drawable.splash_servicios);
         tvNameService.setText(service.getName());
         tvDescriptionService.setText(service.getDescription());
         tvPriceService.setText(String.valueOf(service.getPrice()));
 
+        /*
         imgService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
-        });
+        });*/
 
         return convertView;
 

@@ -54,7 +54,7 @@ public class ProductAdapter extends BaseAdapter {
         TextView tvPriceProduct = (TextView) convertView.findViewById(R.id.tvPriceProduct);
         //Button btnProduct = (Button) convertView.findViewById(R.id.btnProduct);
 
-        imgProduct.setImageResource(product.getImage());
+        imgProduct.setImageResource(R.drawable.splash_products);
         tvNameProduct.setText(product.getName());
         tvDescriptionProduct.setText(product.getDescription());
         tvPriceProduct.setText(String.valueOf(product.getPrice()));
