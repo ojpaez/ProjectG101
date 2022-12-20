@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".MainActivity2">
+    tools:context=".BranchForm">
 
     <TextView
         android:id="@+id/textViewTittle"
@@ -24,9 +24,14 @@
 
         <ImageView
             android:id="@+id/imgBranchForm"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             tools:srcCompat="@tools:sample/avatars" />
+
+        <org.osmdroid.views.MapView
+            android:id="@+id/mapBranchForm"
+            android:layout_width="300dp"
+            android:layout_height="300dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"

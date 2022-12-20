@@ -7,12 +7,17 @@ public class Branch {
     private String image;
     private String name;
     private String description;
+    private String latitud;
+    private String longitud;
 
-    public Branch(String id, String image, String name, String description) {
+
+    public Branch(String id, String image, String name, String description, String latitud, String longitud) {
         this.id = UUID.randomUUID().toString();
         this.image = image;
         this.name = name;
         this.description = description;
+        this.latitud = latitud;
+        this.longitud = longitud;
     }
     /*
     public Branch(String image, String name, String description) {
@@ -22,6 +27,21 @@ public class Branch {
         this.description = description;
     }*/
 
+    public String getLatitud() {
+        return latitud;
+    }
+
+    public void setLatitud(String latitud) {
+        this.latitud = latitud;
+    }
+
+    public String getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(String longitud) {
+        this.longitud = longitud;
+    }
 
     public String getId() {
         return id;

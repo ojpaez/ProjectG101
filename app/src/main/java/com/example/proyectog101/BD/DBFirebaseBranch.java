@@ -30,6 +30,8 @@ public class DBFirebaseBranch {
         bran.put("image", branch.getImage());
         bran.put("name", branch.getName());
         bran.put("description", branch.getDescription());
+        bran.put("latitud", branch.getLatitud());
+        bran.put("longitud", branch.getLongitud());
 
 // Add a new document with a generated ID
         db.collection("branches").add(bran);
@@ -48,7 +50,9 @@ public class DBFirebaseBranch {
                                         document.getData().get("id").toString(),
                                         document.getData().get("image").toString(),
                                         document.getData().get("name").toString(),
-                                        document.getData().get("description").toString()
+                                        document.getData().get("description").toString(),
+                                        document.getData().get("latitud").toString(),
+                                        document.getData().get("longitud").toString()
                                 );
                                 list.add(branch);
                             }

@@ -73,9 +73,23 @@ public class BranchActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent intent;
         switch (item.getItemId()){
             case R.id.itemAddBranch:
-                Intent intent = new Intent(getApplicationContext(), BranchForm.class);
+                intent = new Intent(getApplicationContext(), BranchForm.class);
+                startActivity(intent);
+                return true;
+            case R.id.itemMap:
+                ArrayList<String> latitudes = new ArrayList<>();
+                ArrayList<String> longitudes = new ArrayList<>();
+                for (int i=0; i<arrayBranches.size(); i++){
+                    latitudes.add(arrayBranches.get(i).getLatitud());
+                    longitudes.add(arrayBranches.get(i).getLongitud());
+                }
+
+                intent = new Intent(getApplicationContext(), Maps.class);
+                intent.putStringArrayListExtra("latitudes", latitudes);
+                intent.putStringArrayListExtra("longitudes", longitudes);
                 startActivity(intent);
                 return true;
             case R.id.itemFavoriteBranch:
