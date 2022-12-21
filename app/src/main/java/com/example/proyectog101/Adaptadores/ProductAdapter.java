@@ -10,9 +10,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.proyectog101.Entidades.Product;
 import com.example.proyectog101.MainActivity2;
+import com.example.proyectog101.ProductForm;
 import com.example.proyectog101.R;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
@@ -58,6 +62,16 @@ public class ProductAdapter extends BaseAdapter {
         tvNameProduct.setText(product.getName());
         tvDescriptionProduct.setText(product.getDescription());
         tvPriceProduct.setText(String.valueOf(product.getPrice()));
+
+        /*Imagen desde la url******No va
+        StorageReference storageReference;
+        storageReference = FirebaseStorage.getInstance().getReference();
+        StorageReference filepath = storageReference.child(product.getImage());
+        */
+        Glide.with(context)
+                .load(product.getImage())
+                .override(400,400)
+                .into(imgProduct);
 
         imgProduct.setOnClickListener(new View.OnClickListener() {
             @Override
